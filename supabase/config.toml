@@ -1,0 +1,4 @@
+project_id = "aclfilhdeedaykwdlgbh"
+
+[functions.dify-proxy]
+verify_jwt = false

@@ -1,0 +1,79 @@
+@layer components {
+  /* Modern card system */
+  .card-modern {
+    @apply bg-white/70 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg;
+    background: linear-gradient(145deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-modern:hover {
+    @apply shadow-xl border-white/30;
+    transform: translateY(-2px);
+  }
+  
+  /* Modern gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(261 73% 62%), hsl(282 85% 67%));
+  }
+  
+  .gradient-surface {
+    background: linear-gradient(180deg, hsl(0 0% 98%), hsl(240 5% 96%));
+  }
+  
+  .bg-gradient-surface {
+    background: linear-gradient(180deg, hsl(0 0% 98%), hsl(240 5% 96%));
+  }
+  
+  /* Modern animations */
+  .animate-fade-in {
+    animation: modernFadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: modernSlideUp 0.4s ease-out;
+  }
+  
+  /* Modern buttons */
+  .btn-modern-primary {
+    @apply px-6 py-3 rounded-xl font-medium text-white shadow-lg;
+    background: linear-gradient(135deg, hsl(261 73% 62%), hsl(282 85% 67%));
+    transition: all 0.2s ease;
+  }
+  
+  .btn-modern-primary:hover {
+    @apply shadow-xl;
+    transform: translateY(-1px);
+  }
+  
+  .btn-modern-secondary {
+    @apply px-6 py-3 rounded-xl font-medium border border-gray-200 bg-white/80 backdrop-blur-sm hover:bg-white/90;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-modern-secondary:hover {
+    @apply shadow-md;
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes modernFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modernSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
